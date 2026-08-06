@@ -1,0 +1,9 @@
+cd "/c/Users/flylo/Documents/The Lily Pad Boutique"
+R="refs/brand-art-crop.png"
+node tools/gen_image.mjs "photorealistic editorial interior photography of a small enchanting home-decor boutique at evening, deep green painted walls, warm chandelier light, wooden shelves styled with candles, ceramic vases, greenery, cozy throws, soft golden glow, no people, all signs and labels decoratively blank, no text anywhere" --out assets/shop-interior.png --ar 4:3 --ref "$R"
+node tools/gen_image.mjs "photorealistic editorial photography, boutique display of soft baby clothing, tiny knit sweaters and rompers in blush pink, sage green and cream folded on a vintage wooden table, warm golden lamp glow, dark cozy evening boutique background, no people, no text, blank tags" --out assets/baby-corner.png --ar 4:3 --ref "$R"
+node tools/gen_image.mjs "photorealistic editorial photography, charming outdoor garden decor vignette at dusk, glowing lanterns, potted ferns, ceramic garden stool, string lights, deep twilight blue sky, fireflies, warm golden light, no people, no text" --out assets/outdoor-decor.png --ar 4:3 --ref "$R"
+node tools/gen_image.mjs "photorealistic editorial photography, seasonal home decor vignette on a wooden console table, elegant candlesticks, dried florals in a stoneware jug, woven basket, soft plaid throw, warm candlelight against deep teal wall, evening mood, no people, no text, blank labels" --out assets/seasonal-vignette.png --ar 4:3 --ref "$R"
+node tools/gen_image.mjs "photorealistic editorial photography, close view of pink water lily flowers and glossy lily pads on dark evening pond water with golden bokeh light reflections and fireflies, deep indigo and teal palette, dreamy, no people, no text" --out assets/lily-closeup.png --ar 16:9 --ref "$R"
+echo BATCH_DONE
+ls -la assets/
