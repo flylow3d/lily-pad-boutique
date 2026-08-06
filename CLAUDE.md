@@ -82,7 +82,10 @@ dark pond at dusk, fireflies, pink water lilies, golden script lettering.
   everyday home + outdoor, baby), visit/opening-soon, Facebook CTA
 - Pages: 1–3 max (thin record; don't pad). Relative links only.
 - GoatCounter analytics on every page; noindex,nofollow meta on every page.
-- Repo: flylow3d/the-lily-pad-boutique (GitHub Pages).
+- Repo: flylow3d/lily-pad-boutique (GitHub Pages). NOTE 2026-08-06: the
+  original repo `the-lily-pad-boutique` got its Pages pipeline permanently
+  wedged on GitHub's side (deployment stuck "queued", uncancellable) —
+  republished under this name; Joe will delete the dead repo himself.
 
 ## Session log
 
