@@ -43,8 +43,10 @@ disclaimer + noindex on every page, contact info points at the business).
 - CONTAMINATION (never cite): Sweetwater TN (lilypadboutiqueonline.com, also
   on a Main St — biggest trap), Rochester IN (Lake Manitou), Des Arc AR,
   Northport AL, Rehoboth Beach DE, Chesterton IN, and others.
-- TODO from Joe/Jennifer: confirm email .com, get the real Facebook page
-  URL (site currently links an FB search), opening date, hours, phone.
+- Facebook page URL supplied by Joe 2026-08-10 and verified to resolve to
+  "The Lily Pad Boutique, Gas City, IN": https://www.facebook.com/61590443773906/
+  All four FB links on the site now point there (no more FB search).
+- TODO from Joe/Jennifer: confirm email .com, opening date, hours, phone.
 
 ## Wording rules (must obey)
 
