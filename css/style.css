@@ -45,6 +45,7 @@ h1, h2, h3 { font-family: 'Marcellus', serif; font-weight: 400; line-height: 1.2
   padding: 8px 14px;
 }
 .topbar strong { color: var(--gold); font-weight: 700; }
+.topbar .addr, .topbar strong { display: inline-block; }
 
 /* ---- header ---- */
 header.site {
@@ -53,7 +54,9 @@ header.site {
   backdrop-filter: blur(8px);
   border-bottom: 1px solid var(--hairline);
 }
-.site-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 0; }
+/* keep .wrap's 22px side padding — a `12px 0` shorthand here wipes it out and
+   pushes the wordmark flush against the screen edge on phones */
+.site-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 22px; }
 .brand { display: flex; align-items: center; gap: 12px; text-decoration: none; }
 .brand-name { display: flex; flex-direction: column; line-height: 1.05; }
 .brand-name .script { font-size: 1.5rem; }
@@ -225,4 +228,7 @@ footer .disclaimer {
   .framed::after { display: none; }
   nav.main { display: none; }
   section { padding: 64px 0; }
+  /* stack the topbar into two clean lines instead of orphaning a word */
+  .topbar .addr, .topbar strong { display: block; }
+  .topbar .dot { display: none; }
 }
