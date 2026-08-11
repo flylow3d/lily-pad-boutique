@@ -48,6 +48,27 @@ disclaimer + noindex on every page, contact info points at the business).
   All four FB links on the site now point there (no more FB search).
 - TODO from Joe/Jennifer: confirm email .com, opening date, hours, phone.
 
+## Two design variants (as of 2026-08-11)
+
+The repo now ships TWO versions of the same one-page site, same copy, same
+type family, same honesty rules — only the look differs. Joe's plan is to
+show Jennifer both and let her pick a direction:
+
+- `/index.html` — **"enchanted twilight pond"** (the original). Midnight
+  indigo, gold, CSS fireflies. Art-directed from her Facebook brand artwork.
+  Live: https://flylow3d.github.io/lily-pad-boutique/
+- `/light/index.html` — **"sunlit pond"**. Cream/white paper, fresh leaf
+  green, warm gold, pops of blush pink; drifting-petal animation instead of
+  fireflies; SVG brand mark of a little armchair on a lily pad. Built to
+  match how the REAL shop looks in her own 2026-08-08 photos (cream walls,
+  honey floors, bright windows, crystal chandelier).
+  Live: https://flylow3d.github.io/lily-pad-boutique/light/
+
+Light-variant imagery is Gemini-generated into `light/assets/`, art-directed
+with her real shop photos as `--ref`. Her actual photographs are NOT
+published — they live only in gitignored `refs/fb-photos-2026-08-08/`
+pending her permission.
+
 ## Wording rules (must obey)
 
 - NO hours asserted — none published yet. "Opening soon — follow Facebook

@@ -1,0 +1,264 @@
+/* The Lily Pad Boutique — "sunlit pond" (LIGHT variant of style #22)
+   Same brand, same type family as the twilight version; palette flipped to
+   match the real shop: cream walls, honey floors, fresh green, pops of pink.
+   Type: Great Vibes (script) + Marcellus (headings) + Mulish (body) — <link> */
+
+:root {
+  --cream: #fdfaf3;
+  --cream-2: #f6f0e4;
+  --paper: #ffffff;
+  --ink: #3a4a3f;
+  --ink-soft: #6b7a6e;
+  --leaf: #6f9b62;
+  --leaf-deep: #4a7350;
+  --gold: #b8934a;
+  --gold-soft: #dcc189;
+  --blush: #e07fa8;
+  --blush-soft: #f7d9e5;
+  --pond: #bcdde2;
+  --ink-on-leaf: #ffffff;
+  --hairline: rgba(111, 155, 98, .28);
+  --shadow: 0 14px 40px rgba(58, 74, 63, .10);
+}
+
+* { margin: 0; padding: 0; box-sizing: border-box; }
+html { scroll-behavior: smooth; }
+body {
+  font-family: 'Mulish', system-ui, sans-serif;
+  background: var(--cream);
+  color: var(--ink);
+  line-height: 1.7;
+  overflow-x: hidden;
+}
+img { max-width: 100%; height: auto; display: block; }
+a { color: var(--leaf-deep); }
+
+h1, h2, h3 { font-family: 'Marcellus', serif; font-weight: 400; line-height: 1.2; color: var(--ink); }
+.script { font-family: 'Great Vibes', cursive; font-weight: 400; color: var(--leaf-deep); }
+
+.wrap { max-width: 1100px; margin: 0 auto; padding: 0 22px; }
+
+/* ---- topbar ---- */
+.topbar {
+  background: var(--leaf-deep);
+  font-size: .82rem;
+  letter-spacing: .04em;
+  color: #e8f1e4;
+  text-align: center;
+  padding: 8px 14px;
+}
+.topbar strong { color: #fff; font-weight: 700; }
+.topbar .addr, .topbar strong { display: inline-block; }
+
+/* ---- header ---- */
+header.site {
+  position: sticky; top: 0; z-index: 50;
+  background: rgba(253, 250, 243, .93);
+  backdrop-filter: blur(8px);
+  border-bottom: 1px solid var(--hairline);
+}
+/* NB: keep .wrap's 22px side padding — a `12px 0` shorthand here would wipe
+   it out and jam the wordmark against the screen edge on phones */
+.site-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 22px; }
+.brand { display: flex; align-items: center; gap: 11px; text-decoration: none; }
+.brand-mark { flex: none; }
+.brand-name { display: flex; flex-direction: column; line-height: 1.05; }
+.brand-name .script { font-size: 1.5rem; }
+.brand-name small {
+  font-family: 'Marcellus', serif; letter-spacing: .34em; font-size: .58rem;
+  color: var(--ink-soft); text-transform: uppercase; margin-top: 2px;
+}
+nav.main { display: flex; gap: 22px; }
+nav.main a {
+  font-family: 'Marcellus', serif; font-size: .92rem; letter-spacing: .08em;
+  color: var(--ink); text-decoration: none; text-transform: uppercase;
+}
+nav.main a:hover { color: var(--leaf-deep); }
+
+/* ---- hero ---- */
+.hero {
+  position: relative; min-height: 88svh;
+  display: flex; align-items: center; justify-content: flex-start; text-align: center;
+  isolation: isolate; overflow: hidden;
+}
+.hero .bg {
+  position: absolute; inset: 0; z-index: -2;
+  background: url('../assets/light-hero-lilypad-chair.png') center 45% / cover no-repeat var(--pond);
+}
+/* Light touch only — the bright pond scene is the point, so this just softens
+   the top edge under the sticky header and melts the bottom into the page. */
+.hero .scrim {
+  position: absolute; inset: 0; z-index: -1;
+  background: linear-gradient(to bottom,
+    rgba(253, 250, 243, .42) 0%,
+    rgba(253, 250, 243, .06) 22%,
+    rgba(253, 250, 243, .06) 66%,
+    rgba(253, 250, 243, .97) 99%);
+}
+/* the headline rides on its own frosted card so the photo stays crisp */
+.hero-inner {
+  margin: 74px 22px 92px; max-width: 560px;
+  /* sits in the open water on the left so the armchair stays visible */
+  margin-left: clamp(22px, 8vw, 150px);
+  padding: 42px 40px 44px;
+  background: rgba(253, 250, 243, .84);
+  backdrop-filter: blur(7px);
+  border: 1px solid rgba(255, 255, 255, .85);
+  border-radius: 8px;
+  box-shadow: 0 18px 50px rgba(58, 74, 63, .18);
+}
+.hero .kicker {
+  font-family: 'Marcellus', serif; letter-spacing: .38em; text-transform: uppercase;
+  font-size: .78rem; color: var(--leaf-deep); margin-bottom: 16px;
+}
+.hero h1 { font-size: clamp(2.8rem, 7.2vw, 4.8rem); }
+.hero h1 .script {
+  display: block; font-size: 1.12em; color: var(--leaf-deep);
+}
+.hero .sub {
+  margin: 20px auto 0; max-width: 34em; color: var(--ink);
+  font-size: clamp(1rem, 2.4vw, 1.15rem);
+}
+.hero .cta-row { margin-top: 32px; display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
+
+.btn {
+  display: inline-block; text-decoration: none;
+  font-family: 'Marcellus', serif; letter-spacing: .1em; text-transform: uppercase;
+  font-size: .88rem; padding: 13px 28px; border-radius: 999px;
+  transition: transform .18s ease, box-shadow .18s ease, background .18s ease;
+}
+.btn-leaf {
+  background: linear-gradient(160deg, var(--leaf), var(--leaf-deep));
+  color: var(--ink-on-leaf); box-shadow: 0 8px 22px rgba(74, 115, 80, .28);
+}
+.btn-leaf:hover { transform: translateY(-2px); box-shadow: 0 12px 28px rgba(74, 115, 80, .34); }
+.btn-ghost { border: 1px solid var(--leaf); color: var(--leaf-deep); background: rgba(255, 255, 255, .72); }
+.btn-ghost:hover { background: #fff; border-color: var(--leaf-deep); transform: translateY(-2px); }
+
+/* drifting petals — the daylight answer to the twilight fireflies */
+.petals { position: absolute; inset: 0; z-index: 0; pointer-events: none; overflow: hidden; }
+.petals i {
+  position: absolute; width: 11px; height: 8px;
+  background: var(--blush-soft);
+  border-radius: 60% 40% 55% 45% / 60% 60% 40% 40%;
+  opacity: 0;
+  animation: float 13s ease-in-out infinite;
+}
+.petals i:nth-child(1) { left: 10%; top: 22%; animation-delay: 0s; }
+.petals i:nth-child(2) { left: 24%; top: 58%; animation-delay: 2.4s; }
+.petals i:nth-child(3) { left: 41%; top: 16%; animation-delay: 4.6s; }
+.petals i:nth-child(4) { left: 60%; top: 50%; animation-delay: 1.3s; }
+.petals i:nth-child(5) { left: 76%; top: 26%; animation-delay: 6.1s; }
+.petals i:nth-child(6) { left: 88%; top: 60%; animation-delay: 8.3s; }
+.petals i:nth-child(7) { left: 6%; top: 72%; animation-delay: 10.2s; }
+@keyframes float {
+  0%, 100% { opacity: 0; transform: translate(0, 0) rotate(0deg); }
+  15% { opacity: .85; }
+  55% { opacity: .6; transform: translate(26px, 34px) rotate(120deg); }
+  85% { opacity: .3; transform: translate(44px, 72px) rotate(210deg); }
+}
+@media (prefers-reduced-motion: reduce) {
+  .petals i { animation: none; opacity: .45; }
+  .btn:hover { transform: none; }
+  html { scroll-behavior: auto; }
+}
+
+/* ---- section furniture ---- */
+section { padding: 92px 0; }
+.section-head { text-align: center; max-width: 720px; margin: 0 auto 46px; }
+.section-head .script { display: block; font-size: 1.9rem; margin-bottom: 4px; }
+.section-head h2 { font-size: clamp(1.9rem, 4.4vw, 2.8rem); }
+.section-head .lede { margin-top: 14px; color: var(--ink-soft); }
+
+.flourish {
+  display: flex; align-items: center; gap: 14px; justify-content: center;
+  margin: 0 auto 14px; max-width: 420px; color: var(--leaf);
+}
+.flourish::before, .flourish::after {
+  content: ""; flex: 1; height: 1px;
+  background: linear-gradient(to right, transparent, var(--hairline), transparent);
+}
+
+/* ---- story ---- */
+.story { background: var(--paper); }
+.story-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 52px; align-items: center; }
+.story .text p + p { margin-top: 16px; }
+.story .text strong { color: var(--leaf-deep); }
+.framed { position: relative; }
+.framed img { position: relative; z-index: 1; border-radius: 4px; box-shadow: var(--shadow); }
+/* offset accent rule — must sit above the section background but under the
+   photo, so keep it at z-index 0; at -1 it drops behind the section's own
+   paper fill and never shows */
+.framed::after {
+  content: ""; position: absolute; inset: 16px -16px -16px 16px;
+  border: 1px solid var(--leaf); opacity: .5; border-radius: 4px; z-index: 0;
+}
+
+/* ---- collections ---- */
+.cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+.card {
+  background: var(--paper); border-radius: 6px; overflow: hidden;
+  box-shadow: var(--shadow); border: 1px solid rgba(111, 155, 98, .14);
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+.card:hover { transform: translateY(-4px); box-shadow: 0 20px 46px rgba(58, 74, 63, .15); }
+.card .pad-body { padding: 22px 24px 26px; }
+.card h3 { font-size: 1.25rem; margin-bottom: 8px; color: var(--leaf-deep); }
+.card p { color: var(--ink-soft); font-size: .96rem; }
+@media (prefers-reduced-motion: reduce) { .card:hover { transform: none; } }
+
+/* ---- band ---- */
+.band {
+  position: relative; text-align: center; padding: 96px 22px;
+  background: linear-gradient(rgba(253, 250, 243, .74), rgba(253, 250, 243, .78)),
+              url('../assets/light-outdoor.png') center 55% / cover no-repeat var(--cream-2);
+}
+.band .script { display: block; font-size: clamp(2rem, 5vw, 3rem); margin-bottom: 10px; }
+.band p { max-width: 40em; margin: 0 auto; color: var(--ink); }
+
+/* ---- visit ---- */
+.visit-grid { display: grid; grid-template-columns: 1fr 1.15fr; gap: 40px; }
+.info-tile {
+  background: var(--paper); border: 1px solid rgba(111, 155, 98, .18);
+  border-left: 3px solid var(--leaf); border-radius: 4px;
+  padding: 20px 22px; box-shadow: var(--shadow);
+}
+.info-tile + .info-tile { margin-top: 18px; }
+.info-tile h3 {
+  font-size: .78rem; letter-spacing: .22em; text-transform: uppercase;
+  color: var(--leaf-deep); margin-bottom: 8px;
+}
+.mapbox { border-radius: 6px; overflow: hidden; box-shadow: var(--shadow); min-height: 340px; }
+.mapbox iframe { width: 100%; height: 100%; min-height: 340px; border: 0; display: block; }
+
+/* ---- closing CTA ---- */
+.cta-banner { background: var(--cream-2); text-align: center; }
+.cta-banner .script { display: block; font-size: clamp(2rem, 5vw, 2.9rem); margin-bottom: 8px; }
+.cta-banner p { max-width: 38em; margin: 0 auto 26px; color: var(--ink-soft); }
+
+/* ---- footer ---- */
+footer { background: var(--leaf-deep); color: #e6efe3; padding: 56px 0 34px; }
+footer .script { color: #fff; font-size: 1.9rem; }
+footer a { color: #fff; }
+.foot-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 30px; margin-bottom: 30px; }
+footer .disclaimer {
+  border-top: 1px solid rgba(255, 255, 255, .22); padding-top: 22px;
+  font-size: .8rem; line-height: 1.65; color: #cdddc8; max-width: 62em;
+}
+footer .disclaimer strong { color: #fff; }
+
+/* ---- responsive ---- */
+@media (max-width: 900px) {
+  .cards { grid-template-columns: 1fr; }
+  .story-grid, .visit-grid, .foot-grid { grid-template-columns: 1fr; }
+  .framed::after { display: none; }
+  nav.main { display: none; }
+  section { padding: 64px 0; }
+  /* stack the topbar into two clean lines instead of orphaning a word */
+  .topbar .addr, .topbar strong { display: block; }
+  .topbar .dot { display: none; }
+  /* portrait crop: pan right so the armchair vignette stays in frame */
+  .hero { justify-content: center; }
+  .hero .bg { background-position: 74% 46%; }
+  .hero-inner { margin-left: 22px; padding: 34px 26px 36px; }
+}
