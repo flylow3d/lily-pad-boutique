@@ -61,7 +61,6 @@ header.site {
    it out and jam the wordmark against the screen edge on phones */
 .site-inner { display: flex; align-items: center; justify-content: space-between; gap: 16px; padding: 12px 22px; }
 .brand { display: flex; align-items: center; gap: 11px; text-decoration: none; }
-.brand-mark { flex: none; }
 .brand-name { display: flex; flex-direction: column; line-height: 1.05; }
 .brand-name .script { font-size: 1.5rem; }
 .brand-name small {
