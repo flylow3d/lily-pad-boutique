@@ -221,12 +221,37 @@ footer .disclaimer {
   font-size: .8rem; line-height: 1.65; color: #8d97a6; max-width: 62em;
 }
 
+
+
+/* ---- day/night toggle ---- */
+.site-right { display: flex; align-items: center; gap: 20px; }
+.daynight {
+  display: inline-flex; align-items: center; gap: 2px;
+  border-radius: 999px; padding: 3px; flex: none;
+}
+.dn-opt {
+  display: inline-flex; align-items: center; gap: 7px;
+  font-family: 'Marcellus', serif; font-size: .7rem; letter-spacing: .13em;
+  text-transform: uppercase; text-decoration: none; white-space: nowrap;
+  padding: 6px 13px; border-radius: 999px;
+  transition: background .18s ease, color .18s ease;
+}
+.dn-ico { width: 15px; height: 15px; flex: none; }
+.daynight { background: rgba(230, 189, 111, .09); border: 1px solid var(--hairline); }
+.dn-opt { color: var(--muted); }
+a.dn-opt:hover { color: var(--gold-soft); background: rgba(230, 189, 111, .12); }
+.dn-opt.is-on { background: rgba(230, 189, 111, .18); color: var(--gold-soft); }
+
 /* ---- responsive ---- */
 @media (max-width: 900px) {
   .cards { grid-template-columns: 1fr; }
   .story-grid, .visit-grid { grid-template-columns: 1fr; }
   .framed::after { display: none; }
   nav.main { display: none; }
+  /* icons only — the labels don't fit beside the wordmark on a phone */
+  .dn-label { display: none; }
+  .dn-opt { padding: 7px 10px; }
+  .site-right { gap: 0; }
   section { padding: 64px 0; }
   /* stack the topbar into two clean lines instead of orphaning a word */
   .topbar .addr, .topbar strong { display: block; }
