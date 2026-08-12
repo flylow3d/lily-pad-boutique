@@ -54,15 +54,25 @@ The repo now ships TWO versions of the same one-page site, same copy, same
 type family, same honesty rules — only the look differs. Joe's plan is to
 show Jennifer both and let her pick a direction:
 
-- `/index.html` — **"enchanted twilight pond"** (the original). Midnight
-  indigo, gold, CSS fireflies. Art-directed from her Facebook brand artwork.
-  Live: https://flylow3d.github.io/lily-pad-boutique/
-- `/light/index.html` — **"sunlit pond"**. Cream/white paper, fresh leaf
-  green, warm gold, pops of blush pink; drifting-petal animation instead of
-  fireflies; SVG brand mark of a little armchair on a lily pad. Built to
-  match how the REAL shop looks in her own 2026-08-08 photos (cream walls,
-  honey floors, bright windows, crystal chandelier).
-  Live: https://flylow3d.github.io/lily-pad-boutique/light/
+Since 2026-08-11 the site lives at **https://thelilypadboutique.com** (Joe
+purchased at Porkbun IN HIS OWN account — Jennifer doesn't know yet, Joe to
+tell her he's holding it for her; transfer to her Porkbun account when she
+signs). GitHub Pages custom domain + enforced HTTPS; old github.io URLs 301.
+A Day/Night pill toggle in both headers links the two versions.
+
+- `/index.html` (site root) — **"sunlit pond"** (day, the default — Joe's
+  pick, matches the real shop). Cream paper, fresh leaf green, warm gold,
+  blush pink; drifting-petal animation; SVG brand mark of a little armchair
+  on a lily pad. Imagery Gemini-generated, art-directed with her real
+  2026-08-08 shop photos as --ref (cream walls, honey floors, bright
+  windows, crystal chandelier).
+  Live: https://thelilypadboutique.com
+- `/night/index.html` — **"enchanted twilight pond"** (the 2026-08-06
+  original). Midnight indigo, gold, CSS fireflies. Art-directed from her
+  Facebook brand artwork.
+  Live: https://thelilypadboutique.com/night/
+- `/light/` is a meta-refresh redirect to the root (the day version lived
+  there for a few hours; links were shared).
 
 Light-variant imagery is Gemini-generated into `light/assets/`, art-directed
 with her real shop photos as `--ref`. Her actual photographs are NOT
